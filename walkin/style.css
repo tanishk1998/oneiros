@@ -1,0 +1,58 @@
+.radio-labels {
+  display: block;
+}
+.right-label {
+  text-align: right;
+}
+body {
+  overflow: hidden;
+  margin: 0;
+}
+#walkin-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 5px #ccc;
+}
+.user-info {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #222;
+  font-size: 1.1rem;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  color: #ddd;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #walkin-info {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}

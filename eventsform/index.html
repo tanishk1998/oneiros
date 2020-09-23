@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>FORM</title>
+</head>
+
+<body>
+
+    <div id="eventsform">
+        <h1>Events Form</h1>
+        <input type="text" placeholder="Event name" v-model="ename">
+        <input type="text" placeholder="Club" v-model="club">
+        <input type="number" placeholder="Min Participants" v-model="minParticipants">
+        <input type="number" placeholder="Max Participants" v-model="maxParticipants">
+        <input type="number" placeholder="Fee" v-model="fee">
+        <p>{{errorMsg}}</p>
+        <button @click='submit' :disabled="disabled">Submit</button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>
+    <script src="/js/config/db.js"></script>
+    <script src="/js/config/form.js"></script>
+</body>
+
+</html>

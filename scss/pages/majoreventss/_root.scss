@@ -1,0 +1,39 @@
+.me-container {
+  display: flex;
+  height: 100%;
+  transition: .2s all;
+  cursor: pointer;
+
+  .destival {
+    &__splash {
+      background: url('/img/majorevents/destival.jpg');
+    }
+
+    &__overlay {
+      background: #2196F3;
+    }
+  }
+
+  .requiem {
+    &__splash {
+      background: url('/img/majorevents/requiem.jpg');
+    }
+
+    &__overlay {
+      background: #9C27B0;
+    }
+  }
+
+  .fashionshow {
+    &__splash {
+      background: url('/img/majorevents/fashionshow.jpg');
+    }
+
+    &__overlay {
+      background: #E91E63;
+    }
+  }
+}
+
+@import './global';
+@import './content';

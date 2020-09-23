@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="The Blog Of MUJ.">
+  <meta property="og:title" content="Blog - Oneiros" />
+  <meta property="og:url" content="https://www.oneiros.mext.in/5roommates/" />
+  <meta property="og:description" content="The Blog Of MUJ.">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Blog - Oneiros</title>
+</head>
+
+<body>
+  <div class="loader-prime">
+    <img src="/img/logos/alpha.gif" alt="Alpha" />
+    <div class="wordmark"></div>
+    <div class="moodi-logo"></div>
+    <div class="mext-logo"></div>
+    <div class="dates">
+      <h4>18th - 20th October</h4>
+    </div>
+  </div>
+  <header>
+    <img id="wordmark" src="/img/logos/wordmark-white.png" alt="Wordmark">
+    <div class="nav">
+      <ul>
+        <li>
+          <span class="nav__sword"></span>
+          <span class="nav__handle"></span>
+        </li>
+        <li>
+          <span class="nav__handle"></span>
+          <span class="nav__sword"></span>
+        </li>
+        <li>
+          <span class="nav__sword"></span>
+          <span class="nav__handle"></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-container newnav-container">
+      <div class="newnav-container__splash">
+        <div class="newnav-container__splash--box">
+          <img src="/img/logos/wordmark.png" alt="">
+        </div>
+      </div>
+      <ul>
+        <li>
+          <a href="/" class="custom-link">Home</a>
+        </li>
+        <li id="loginButton">
+          <a href="/login" class="custom-link">Sign In</a>
+        </li>
+        <li id="registerButton">
+          <a href="/register" class="custom-link">Sign Up</a>
+        </li>
+        <li>
+          <a href="/about/playmakers.html" class="custom-link">Team</a>
+        </li>
+        <li id="eventsButton">
+          <a href="/eventregistrations" id="eventsButton" class="custom-link">Registration</a>
+        </li>
+        <li>
+          <a href="/events" class="custom-link">Events</a>
+        </li>
+        <li>
+          <a href="/majorevents" class="custom-link">Major Events</a>
+        </li>
+        <li>
+          <a href="/blog" class="custom-link">Blog</a>
+        </li>
+        <li>
+          <a href="/campusambassador" class="custom-link">Campus Ambassador</a>
+        </li>
+        <li>
+          <a href="/accommodation" class="custom-link">Accommodation</a>
+        </li>
+        <li>
+          <a href="/sponsors" class="custom-link">Sponsors</a>
+        </li>
+        <li>
+          <a href="/funzone" class="custom-link">Funzone</a>
+        </li>
+        <li id="logout">
+          <a href="/" class="custom-link">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="layer__effect">
+    <div class="layer-wrapper">
+      <img src="/img/logos/wordmark-white.png" alt="" class="layer layer--top">
+      <button id="blog-anchor">Explore Blog</button>
+    </div>
+
+    <!-- <img src="/img/logos/wordmark-black.png" alt="" class="layer layer--middle"> -->
+  </div>
+  <div class="blog__cards">
+    <div class="blog__card">
+      <div class="blog__card__image" style="background-image:url('/img/blog/10peepsmuj/1.jpg')">
+      </div>
+      <div class="blog__card__content">
+        <h1 class="blog__card__content--title">10 Types of People in MUJ</h1>
+        <p class="blog__card__content--body">
+          That guy in your class whose name you've heard, to that guy who never sleeps. You've seen them all in this
+          college.
+        </p>
+        <div class="blog__card__content--controls">
+          <a href="./10peepsmuj">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="blog__card">
+      <div class="blog__card__image" style="background-image:url('/img/blog/5roommates/1.jpg')">
+      </div>
+      <div class="blog__card__content">
+        <h1 class="blog__card__content--title">Types of Roommates - Part 1</h1>
+        <p class="blog__card__content--body">
+          All of us have heard stories of that one roommate who is on his pc gaming all day or the roommate who goes
+          about without food and sleep.
+        </p>
+        <div class="blog__card__content--controls">
+          <a href="./5roommates">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>
+  <script src="/js/config/db.js"></script>
+  <script src="/js/libs/jquery.js"></script>
+  <script src="/js/common/global.js"></script>
+  <script>
+    function scrollDown() {
+      var vheight = $(window).height();
+      $('html, body').animate({
+        scrollTop: (Math.floor($(window).scrollTop() / vheight) + 1) * vheight
+      }, 500);
+    };
+    $(document).ready(function () {
+      $('#blog-anchor').click(function () {
+        scrollDown();
+        event.preventDefault();
+      })
+    })
+  </script>
+</body>
+
+</html>

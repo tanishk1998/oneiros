@@ -1,0 +1,64 @@
+.majorevent {
+  &__content {
+    position: relative;
+    padding: 5rem;
+
+    &--link {
+      font-size: 1.5rem;
+      color: #777;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &--header {
+      font-size: 3rem;
+      font-family: "Gotham-Bold";
+      color: $color-primary;
+      margin: 2rem 0;
+    }
+
+    &--subheader {
+      font-size: 2.5rem;
+      margin: 2rem 0;
+      color: #aaa;
+      font-family: 'Gotham-Bold';
+    }
+
+    &--para {
+      font-size: 2.2rem;
+      line-height: 1.8;
+
+      span.emphasize {
+        color: $color-primary;
+        font-family: "Gotham-Bold";
+      }
+    }
+
+    &--details {
+      display: flex;
+      justify-content: space-between;
+
+      &__container {
+        margin-top: 2rem;
+
+        &>* {
+          line-height: 2;
+        }
+      }
+
+      h3 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+
+      li {
+        font-size: 2rem;
+      }
+    }
+  }
+}

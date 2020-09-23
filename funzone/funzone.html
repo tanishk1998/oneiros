@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Funzone</title>
+</head>
+
+<body>
+
+  <div class="loader-prime">
+    <img src="/img/logos/alpha.gif" alt="Alpha" />
+    <div class="wordmark"></div>
+    <div class="moodi-logo"></div>
+    <div class="mext-logo"></div>
+    <div class="dates">
+      <h4>18th - 20th October</h4>
+    </div>
+  </div>
+  <header>
+    <img id="wordmark" src="/img/logos/wordmark-white.png" alt="Wordmark">
+    <div class="nav">
+      <ul>
+        <li>
+          <span class="nav__sword"></span>
+          <span class="nav__handle"></span>
+        </li>
+        <li>
+          <span class="nav__handle"></span>
+          <span class="nav__sword"></span>
+        </li>
+        <li>
+          <span class="nav__sword"></span>
+          <span class="nav__handle"></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-container newnav-container">
+      <div class="newnav-container__splash">
+        <div class="newnav-container__splash--box">
+          <img src="/img/logos/wordmark.png" alt="">
+        </div>
+      </div>
+      <ul>
+        <li>
+          <a href="/" class="custom-link">Home</a>
+        </li>
+        <li id="loginButton">
+          <a href="/login" class="custom-link">Sign In</a>
+        </li>
+        <li id="registerButton">
+          <a href="/register" class="custom-link">Sign Up</a>
+        </li>
+        <li>
+          <a href="/about/playmakers.html" class="custom-link">Team</a>
+        </li>
+        <li id="eventsButton">
+          <a href="/eventregistrations" id="eventsButton" class="custom-link">Registration</a>
+        </li>
+        <li>
+          <a href="/events" class="custom-link">Events</a>
+        </li>
+        <li>
+          <a href="/majorevents" class="custom-link">Major Events</a>
+        </li>
+        <li>
+          <a href="/blog" class="custom-link">Blog</a>
+        </li>
+        <li>
+          <a href="/campusambassador" class="custom-link">Campus Ambassador</a>
+        </li>
+        <li>
+          <a href="/accommodation" class="custom-link">Accommodation</a>
+        </li>
+        <li>
+          <a href="/sponsors" class="custom-link">Sponsors</a>
+        </li>
+        <li>
+          <a href="/funzone" class="custom-link">Funzone</a>
+        </li>
+        <li id="logout">
+          <a href="/" class="custom-link">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div id="black-overlay"></div>
+
+  <div class="splashscreen">
+    <h2 class="splashscreen__header">Funzone</h2>
+    <button class="scrolldown arcade-button" id="enter">Enter</button>
+    <button class="arcade-button" id="logout-funzone">Logout</button>
+  </div>
+
+  <div class="game-container">
+    <h2 class="splashscreen__header game-container__header">Funzone</h2>
+    <a href="#" class="game--credits">
+      <span>Credits for</span>
+    </a>
+    <div class="game-loader">
+
+    </div>
+    <div class="game">
+
+      <a href="./games/pacman" class="game__card" id="pacman">
+        <picture id="pacmanimage">
+          <source srcset="./assets/images/pcmn.gif" media="(max-width: 600px)">
+          <img src="./assets/images/pacman.gif" alt="">
+        </picture>
+        <p class="game__card--title">Pacman</p>
+      </a>
+      <a href="./games/floppybird" class="game__card" id="flappybird">
+        <picture>
+          <source srcset="./assets/images/flappbird.gif" media="(max-width: 600px)">
+          <img src="./assets/images/flappy.gif" alt="">
+        </picture>
+        <p class="game__card--title">Flappy Bird</p>
+      </a>
+      <a href="./games/spaceinvaders2/index.html" class="game__card" id="spaceinvaders">
+        <picture>
+          <source srcset="./assets/images/spaceinvadersmall.png" media="(max-width: 600px)">
+          <img src="./assets/images/spaceinvaders.jpg" alt="">
+        </picture>
+        <p class="game__card--title">Space Invader</p>
+      </a>
+      <a href="./games/trex/index.html" class="game__card" id="trex">
+        <picture>
+          <source srcset="./assets/images/trex.png" media="(max-width: 600px)">
+          <img src="./assets/images/spaceinvaders.jpg" alt="">
+        </picture>
+        <p class="game__card--title">T-Rex</p>
+      </a>
+    </div>
+  </div>
+  <div class="controls-container">
+    <button class="back back--play" id="play">Play</button>
+    <button class="back" id="cancel">back</button>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+  <script src="./assets/js/libs/jquery.js"></script>
+  <script src="./assets/js/libs/howler.js"></script>
+  <script src="./assets/js/libs/spalsh.js"></script>
+  <script src="./assets/js/libs/btn.js"></script>
+  <script src="./games/main.js"></script>
+  <script src="/js/common/global.js"></script>
+</body>
+
+</html>

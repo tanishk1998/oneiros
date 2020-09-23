@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Events</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="/css/libs/fullpage.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="loader-prime">
+    <img src="/img/logos/alpha.gif" alt="Alpha" />
+    <div class="wordmark"></div>
+    <div class="moodi-logo"></div>
+    <div class="mext-logo"></div>
+    <div class="dates">
+      <h4>18th - 20th October</h4>
+    </div>
+  </div>
+
+  <header>
+    <img id="wordmark" src="/img/logos/wordmark-white.png" alt="Wordmark">
+    <div class="nav">
+      <ul>
+        <li>
+          <span class="nav__sword"></span>
+          <span class="nav__handle"></span>
+        </li>
+        <li>
+          <span class="nav__handle"></span>
+          <span class="nav__sword"></span>
+        </li>
+        <li>
+          <span class="nav__sword"></span>
+          <span class="nav__handle"></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-container newnav-container">
+      <div class="newnav-container__splash">
+        <div class="newnav-container__splash--box">
+          <img src="/img/logos/wordmark.png" alt="">
+        </div>
+      </div>
+      <ul>
+        <li>
+          <a href="/" class="custom-link">Home</a>
+        </li>
+        <li id="loginButton">
+          <a href="/login" class="custom-link">Sign In</a>
+        </li>
+        <li id="registerButton">
+          <a href="/register" class="custom-link">Sign Up</a>
+        </li>
+        <li>
+          <a href="/about/playmakers.html" class="custom-link">Team</a>
+        </li>
+        <li id="eventsButton">
+          <a href="/eventregistrations" id="eventsButton" class="custom-link">Registration</a>
+        </li>
+        <li>
+          <a href="/events" class="custom-link">Events</a>
+        </li>
+        <li>
+          <a href="/majorevents" class="custom-link">Major Events</a>
+        </li>
+        <li>
+          <a href="/blog" class="custom-link">Blog</a>
+        </li>
+        <li>
+          <a href="/campusambassador" class="custom-link">Campus Ambassador</a>
+        </li>
+        <li>
+          <a href="/accommodation" class="custom-link">Accommodation</a>
+        </li>
+        <li>
+          <a href="/sponsors" class="custom-link">Sponsors</a>
+        </li>
+        <li>
+          <a href="/funzone" class="custom-link">Funzone</a>
+        </li>
+        <li id="logout">
+          <a href="/" class="custom-link">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div id="black-overlay"></div>
+
+  <main id="fullpage">
+
+    <section class="events-splash section">
+      <video id="events-video" controls autoplay playsinline muted loop>
+        <source src="/img/events/screens/screen.mp4" type="video/mp4">
+        <source src="/img/events/screens/screen.webm" type="video/webm">
+      </video>
+      <div class="events-splash">
+        <div class="events-splash__container">
+          <h1 class="events-splash__container--header">Events</h1>
+          <!-- <p class="events-splash__container--content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab repellat, expedita veniam illum, ipsum minima
+            doloribus repellendus rem quo similique ipsa natus distinctio magni! Esse quidem ullam earum quas!
+          </p> -->
+        </div>
+        <div class="events-splash__overlay"></div>
+      </div>
+      <a href="#club-names">
+        <div class="downarrow bounce">
+          <i class="fas fa-angle-down"></i>
+        </div>
+      </a>
+    </section>
+    <section class="events-clubs section">
+      <div class="clubs-grid">
+        <a href="/events/aperture.html" class="clubs-grid__item custom-link">
+          <div class="clubs-grid__item--solid club-aperture">
+            <h1 class="clubs-grid__item--header"></h1>
+            <p class="clubs-grid__item--content">Photography related events.</p>
+            <img class="clubs-grid__item--logo" src="/img/events/clubs/logos/aperture.png" alt="Aperture" id="aperturelogo">
+          </div>
+          <div class="clubs-grid__item--image club-aperture__image club-image"></div>
+        </a>
+        <a href="/events/tmc.html" class="clubs-grid__item custom-link">
+          <div class="clubs-grid__item--solid club-tmc">
+            <h1 class="clubs-grid__item--header"></h1>
+            <p class="clubs-grid__item--content">Tune in and forget all your trebles!</p>
+            <img class="clubs-grid__item--logo" src="/img/events/clubs/logos/tmc.png" alt="Tmc">
+          </div>
+          <div class="clubs-grid__item--image club-tmc__image club-image"></div>
+        </a>
+        <a href="/events/litmus.html" class="clubs-grid__item custom-link">
+          <div class="clubs-grid__item--solid club-litmus">
+            <h1 class="clubs-grid__item--header"></h1>
+            <p class="clubs-grid__item--content">All the literates, this way please.</p>
+            <img class="clubs-grid__item--logo" src="/img/events/clubs/logos/litmus.png" alt="Litmus">
+          </div>
+          <div class="clubs-grid__item--image club-litmus__image club-image"></div>
+        </a>
+        <a href="/events/coreografia.html" class="clubs-grid__item custom-link">
+          <div class="clubs-grid__item--solid club-choreo">
+            <h1 class="clubs-grid__item--header"></h1>
+            <p class="clubs-grid__item--content">Touch. Move. Inspire.</p>
+            <img style="width: 35rem;" class="clubs-grid__item--logo" src="/img/events/clubs/logos/coreografia.png" alt="Coreografia">
+          </div>
+          <div class="clubs-grid__item--image club-choreo__image club-image"></div>
+        </a>
+      </div>
+    </section>
+    <section class="events-clubs section">
+      <div class="clubs-grid">
+        <a href="/events/cinefilia.html" class="clubs-grid__item custom-link">
+          <div class="clubs-grid__item--solid club-cinefilia">
+            <h1 class="clubs-grid__item--header"></h1>
+            <p class="clubs-grid__item--content">For the thespian in you.</p>
+            <img class="clubs-grid__item--logo" src="/img/events/clubs/logos/cinefilia.png" alt="Cinefilia">
+          </div>
+          <div class="clubs-grid__item--image club-cinefilia__image club-image"></div>
+        </a>
+        <a href="/events/scribbles.html" class="clubs-grid__item">
+          <div class="clubs-grid__item--solid club-scribbles">
+            <h1 class="clubs-grid__item--header"></h1>
+            <p class="clubs-grid__item--content">Imagine.Draw.Paint.Create</p>
+            <img style="width: 35rem;" class="clubs-grid__item--logo" src="/img/events/clubs/logos/scribbles.png" alt="Scribbles">
+          </div>
+          <div class="clubs-grid__item--image club-scribbles__image club-image"></div>
+        </a>
+
+        <a href="/events/sophia.html" id="events-sophia" class="clubs-grid__item">
+          <div class="clubs-grid__item--solid club-sophia">
+            <h1 class="clubs-grid__item--header"></h1>
+            <p class="clubs-grid__item--content">Love Philosophy? We're here for you.</p>
+            <img class="clubs-grid__item--logo" src="/img/events/clubs/logos/sophia.png" alt="Sophia">
+          </div>
+          <div class="clubs-grid__item--image club-sophia__image club-image"></div>
+        </a>
+        <a href="/events/qureka.html" class="clubs-grid__item">
+          <div class="clubs-grid__item--solid club-qureka">
+            <h1 class="clubs-grid__item--header"></h1>
+            <p class="clubs-grid__item--content">Cogito, Ergo Sum</p>
+            <img class="clubs-grid__item--logo" src="/img/events/clubs/logos/qureka.png" alt="Qureka">
+          </div>
+          <div class="clubs-grid__item--image club-qureka__image club-image"></div>
+        </a>
+      </div>
+    </section>
+    <section class="events-clubs section">
+      <div class="clubs-grid">
+        <a href="/events/tapmi.html" class="clubs-grid__item">
+          <div class="clubs-grid__item--solid club-tapmi">
+            <h1 class="clubs-grid__item--header"></h1>
+            <p class="clubs-grid__item--content">Stats? Figures? We've got it all.</p>
+            <img class="clubs-grid__item--logo" src="/img/events/clubs/logos/tapmi.png" alt="tapmi" id="tapmiLogo">
+          </div>
+          <div class="clubs-grid__item--image club-tapmi__image club-image"></div>
+        </a>
+        <a href="/events/shabd.html" class="clubs-grid__item">
+          <div class="clubs-grid__item--solid club-shabd">
+            <h1 class="clubs-grid__item--header"></h1>
+            <p class="clubs-grid__item--content">For the Premchand in you.</p>
+            <img class="clubs-grid__item--logo" src="/img/events/clubs/logos/shabd.png" alt="Shabd" id="shabdLogo">
+          </div>
+          <div class="clubs-grid__item--image club-shabd__image club-image"></div>
+        </a>
+        <a style="grid-column: 1/-1;" id="misc-events" href="/events/misevents.html" class="clubs-grid__item">
+          <div class="clubs-grid__item--solid club-misevents">
+            <h1 class="clubs-grid__item--header"></h1>
+            <p class="clubs-grid__item--content">Are Challenges your thing?</p>
+            <img class="clubs-grid__item--logo" src="/img/events/clubs/logos/misevents.png" alt="misevents" id="miseventsLogo">
+          </div>
+          <div class="clubs-grid__item--image club-misevents__image club-image"></div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>
+  <script src="/js/config/db.js"></script>
+  <script src="/js/libs/jquery.js"></script>
+  <script src="/js/libs/fullpage.js"></script>
+  <script src="/js/events/main.js"></script>
+  <script src="/js/common/global.js"></script>
+  <script>
+    const video = document.getElementById('events-video')
+    setTimeout(() => {
+      video.play()
+    }, 1000);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "Oneiros",
+  "short_name": "Oneiros",
+  "theme_color": "#e50914",
+  "background_color": "#000000",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/index.html",
+  "icons": [
+    {
+      "src": "/img/app/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

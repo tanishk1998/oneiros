@@ -1,0 +1,41 @@
+#admin-events {
+  padding-top: 4rem;
+  text-align: center;
+  h2 {
+    color: $color-black;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+  }
+  input,
+  select {
+    margin: 0 auto;
+    outline: none;
+    display: block;
+    border-radius: 0;
+    width: 20%;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    :focus {
+      outline: 1px solid black;
+    }
+  }
+  button {
+    border-radius: 0;
+    width: 20%;
+    border: 1px solid black;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    outline: none;
+  }
+  p {
+    width: 50%;
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  div {
+    margin-bottom: 5rem;
+  }
+}

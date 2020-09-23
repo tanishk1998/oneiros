@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin - Event Registrations</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+</head>
+
+<body>
+    <div class="admin-loader">
+        <div class="box-wrapper">
+            <h2>Loading</h2>
+            <div class="box">
+            </div>
+        </div>
+    </div>
+    <div id="admin-events">
+        <h2>Events Admin Portal</h2>
+        <select name="" id="" v-model="selectedClub" @change="changeclub">
+            <option value="" disabled>Select Club</option>
+            <option :value="club" v-for="club in clubs">{{club.name}}</option>
+        </select>
+
+        <select name="" id="" v-if="selectedClub != ''" v-model="selectedEvent">
+            <option value="" disabled>Select Event</option>
+            <option :value="event" v-for="event in selectedClub.events">{{event.name}}</option>
+        </select>
+        <button @click="display" :style="disabled ? {pointerEvents: 'none', opacity: .5} : {pointerEvents: 'all', opacity: 1}"
+            :disabled="disabled">Submit</button>
+        <div v-for="user in usersarr">
+            <p>
+                Name: {{user.userName}} <br> <br>
+                No of Participants: {{user.value}} <br> <br>
+                Paid: {{user.paid}} <br> <br>
+                Total Amount: {{user.amount}} <br> <br>
+                Email: {{user.email}} <br> <br>
+                Unique Code: {{user.ucode}} <br> <br>
+                Mobile Number: {{user.pno}} <br> <br>
+                Whatsapp Number: {{user.wpno}} <br> <br>
+                <span v-if="!user.isManipal">College: {{user.college}} </span>
+                <span v-else>College: Manipal University Jaipur </span>
+                <p v-if="selectedEvent.name == 'Requiem - War Of Bands'">
+                    Band Name: {{user.bandName}} <br> <br>
+                    Genre: {{user.genre}} <br> <br>
+                    Description: {{user.description}} <br> <br>
+                    Video Link: {{user.videoLink}}
+                </p>
+                <p v-if="selectedEvent.name == 'Destival - Group Dance Competition'">
+                    Links: {{user.links}} <br> <br>
+                    Team Name: {{user.teamName}} <br> <br>
+                </p>
+                <p v-if="selectedEvent.name == 'Kairos - Fashion Show'">
+                    Team Name: {{user.teamName}} <br> <br>
+                </p>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="../checkPerson.js"></script>
+        <script src="/js/config/db.js"></script>
+        <script src="./events.js"></script>
+        <script src="./index.js"></script>
+        <script src="/js/common/global.js"></script>
+</body>
+
+</html>

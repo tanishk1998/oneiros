@@ -1,0 +1,89 @@
+.majorevent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  width: 34%;
+  transition: .5s all cubic-bezier(0.01, 0.67, 0.45, 1.04) !important;
+
+  &__splash {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    background-position: center !important;
+    pointer-events: none;
+    transition: .1s transform;
+  }
+
+  &:hover &__overlay {
+    opacity: 0;
+  }
+
+  &:hover &__splash {
+    transform: scale(1.2);
+  }
+
+  &:hover &__header {
+    transform: scale(1.5);
+  }
+
+  &:hover &__subheader {
+    transform: scale(1.5);
+    margin-top: 1rem;
+  }
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    z-index: 1;
+    transition: .2s all;
+    pointer-events: none;
+  }
+
+  &__header {
+    font-family: 'Gotham-Bold';
+    font-size: 3rem;
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    transition: .2s all;
+    pointer-events: none;
+  }
+
+  hr {
+    background-color: white;
+    height: 1rem;
+  }
+
+  &__subheader {
+    font-family: 'Gotham-Light';
+    font-size: 2rem;
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    transition: .2s all;
+    pointer-events: none;
+  }
+}
+
+
+.majorevent-expand {
+  width: 100% !important;
+}
+
+.majorevent-contract {
+  // flex: 0;
+  width: 0;
+}
+
+.overlay-darken {
+  background: #000 !important;
+  opacity: .9 !important;
+  pointer-events: none;
+}

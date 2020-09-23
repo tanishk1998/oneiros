@@ -1,0 +1,95 @@
+.login {
+  &--form {
+    display: inline-block;
+    margin-left: 15rem;
+
+    &-wrapper {
+      height: 100vh;
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      background: url("/img/login/background.png");
+      background-position: right;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @media screen and (max-width: 800px) {
+        background: none;
+      }
+    }
+
+    .input-group {
+      label {
+        margin-top: 1.5rem;
+        font-family: "Gotham", sans-serif;
+        font-size: 2.5rem;
+        display: block;
+        padding-bottom: 1rem;
+      }
+
+      .line {
+        height: 3px;
+        margin-top: 10px;
+        background-color: black;
+        width: 0;
+        display: block;
+        transition: width 0.2s;
+      }
+
+      input:focus + .line {
+        width: 100%;
+      }
+
+      input {
+        border: none;
+        font-size: 3rem;
+        height: 3rem;
+        font-family: "Gotham-Light", sans-serif;
+        color: black;
+        outline: none;
+
+        &:focus::placeholder {
+          color: #eee;
+        }
+
+        &:focus {
+          outline: none;
+          border: none;
+        }
+
+        &::placeholder {
+          transition: 0.2s all;
+          color: #ddd;
+        }
+      }
+
+      &:not(:nth-child(1)) {
+        margin-top: 5rem;
+      }
+    }
+  }
+
+  .title {
+    font-family: "Gotham-Black", sans-serif;
+    color: $color-primary;
+    font-size: 4rem;
+    margin-bottom: 9rem;
+    font-size: 10rem;
+  }
+
+  &--background {
+    width: 50%;
+    height: 100vh;
+    float: right;
+  }
+}
+
+#login-error {
+  font-size: 2rem;
+  font-family: "Gotham-Bold";
+  position: absolute;
+  color: $color-primary;
+  margin-top: 5rem;
+}

@@ -1,0 +1,21 @@
+.me {
+  &__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 21;
+    top: 0;
+    background: #000;
+    display: none;
+  }
+}
+
+.overlay--moveinleft {
+  left: 0;
+  width: 100%;
+}
+
+.overlay--moveinright {
+  right: 0;
+  width: 100%;
+}

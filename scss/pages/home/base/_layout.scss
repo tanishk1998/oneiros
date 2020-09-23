@@ -1,0 +1,36 @@
+.home-splash {
+  height: 100%;
+  background: #020202;
+  overflow: hidden;
+}
+
+.home-about {
+  background: url("/img/home/about.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.home-theme {
+  background: #ffdf00;
+  overflow: hidden;
+
+  &__splash {
+    height: 100%;
+    width: 100%;
+    background: url("/img/home/theme.jpg");
+    background-size: contain;
+    background-position: right;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    transition: .1s all;
+  }
+}
+
+.home-contact {
+  background: #000000;
+}

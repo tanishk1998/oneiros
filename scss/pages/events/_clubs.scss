@@ -1,0 +1,105 @@
+.club-image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-position: center;
+  opacity: 0;
+}
+
+.club-aperture {
+  background: #ff5722;
+
+  &__image {
+    background: url("/img/events/clubs/overlays/aperture.jpg");
+  }
+}
+
+.club-tmc {
+  background: #c62828;
+
+  &__image {
+    background: url("/img/events/clubs/overlays/tmc.jpg");
+  }
+}
+
+.club-litmus {
+  background: #303f9f;
+
+  &__image {
+    background: url("/img/events/clubs/overlays/litmus.jpg");
+  }
+}
+
+.club-choreo {
+  background: #f06292;
+
+  &__image {
+    background: url("/img/events/clubs/overlays/coreografia.jpg");
+  }
+}
+
+.club-scribbles {
+  background: #41a3f3;
+
+  &__image {
+    background: url("/img/events/clubs/overlays/scribbles.jpg");
+  }
+}
+
+.club-cinefilia {
+  background: #ffb300;
+
+  &__image {
+    background: url("/img/events/clubs/overlays/cinefilia.jpg");
+  }
+}
+
+.club-shabd {
+  background: #795548;
+
+  &__image {
+    background: url("/img/events/clubs/overlays/shabd.jpg");
+  }
+}
+
+.club-qureka {
+  background: #9c27b0;
+
+  &__image {
+    background: url("/img/events/clubs/overlays/qureka.jpg");
+  }
+}
+
+.club-sophia {
+  background: darkgreen;
+
+  &__image {
+    background: url("/img/events/clubs/overlays/sophia.jpg");
+  }
+}
+
+.club-spic {
+  background: yellow;
+
+  &__image {
+    background: url("/img/events/clubs/overlays/spic.jpg");
+  }
+}
+
+.club-tapmi {
+  background: red;
+
+  &__image {
+    background: url("/img/events/clubs/overlays/tapmi.jpg");
+  }
+}
+
+.club-misevents {
+  background: #2196f3;
+
+  &__image {
+    background: url("/img/events/clubs/overlays/misevents.jpg");
+  }
+}

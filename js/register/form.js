@@ -1,0 +1,2 @@
+$("#mujform").validate();
+$("#otherform").validate();

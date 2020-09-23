@@ -1,0 +1,24 @@
+.social {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 2rem;
+  z-index: 100;
+  top: 50%;
+  transform: translateY(-50%);
+  &-icons {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  @media screen and (max-width: 768px) {
+    &-icons {
+      font-size: 3rem;
+    }
+  }
+  &-icons:hover {
+    transform: scale(1.1);
+  }
+}

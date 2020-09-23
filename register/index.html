@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+  <title>Register</title>
+</head>
+
+<body style="overflow: hidden">
+  <div class="loader-prime">
+    <img src="/img/logos/alpha.gif" alt="Alpha" />
+    <div class="wordmark"></div>
+    <div class="moodi-logo"></div>
+    <div class="mext-logo"></div>
+    <div class="dates">
+      <h4>18th - 20th October</h4>
+    </div>
+  </div>
+
+  <header>
+    <img id="wordmark" class="wordmark-dark" src="/img/logos/wordmark-white.png" alt="Wordmark">
+    <div class="nav">
+      <ul>
+        <li>
+          <span class="nav__sword"></span>
+          <span class="nav__handle"></span>
+        </li>
+        <li>
+          <span class="nav__handle"></span>
+          <span class="nav__sword"></span>
+        </li>
+        <li>
+          <span class="nav__sword"></span>
+          <span class="nav__handle"></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-container newnav-container">
+      <div class="newnav-container__splash">
+        <div class="newnav-container__splash--box">
+          <img src="/img/logos/wordmark.png" alt="">
+        </div>
+      </div>
+      <ul>
+        <li>
+          <a href="/" class="custom-link">Home</a>
+        </li>
+        <li id="loginButton">
+          <a href="/login" class="custom-link">Sign In</a>
+        </li>
+        <li id="registerButton">
+          <a href="/register" class="custom-link">Sign Up</a>
+        </li>
+        <li>
+          <a href="/about/playmakers.html" class="custom-link">Team</a>
+        </li>
+        <li id="eventsButton">
+          <a href="/eventregistrations" id="eventsButton" class="custom-link">Registration</a>
+        </li>
+        <li>
+          <a href="/events" class="custom-link">Events</a>
+        </li>
+        <li>
+          <a href="/majorevents" class="custom-link">Major Events</a>
+        </li>
+        <li>
+          <a href="/blog" class="custom-link">Blog</a>
+        </li>
+        <li>
+          <a href="/campusambassador" class="custom-link">Campus Ambassador</a>
+        </li>
+        <li>
+          <a href="/accommodation" class="custom-link">Accommodation</a>
+        </li>
+        <li>
+          <a href="/sponsors" class="custom-link">Sponsors</a>
+        </li>
+        <li>
+          <a href="/funzone" class="custom-link">Funzone</a>
+        </li>
+        <li id="logout">
+          <a href="/" class="custom-link">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div id="black-overlay"></div>
+
+  <main id="register-container">
+    <div class="register-container">
+      <div class="register-container__white-section">
+        <div class="register-container__overlay register-container__white-section--overlay">
+          <h1>MUJ Students</h1>
+        </div>
+        <div class="register-container__underlay register-container__white-section--underlay">
+          <h1 id="mob-reg">Registration for MUJ STudents</h1>
+          <form id="mujform" @submit.prevent="registerManipal">
+            <section>
+              <input type="text" name="name" v-model="name" placeholder="Your Name" required>
+            </section>
+            <section>
+              <input type="text" name="username" v-model="username" placeholder="Username" required>
+            </section>
+            <section>
+              <input type="number" name="regno" v-model="regno" placeholder="Registration Number" required>
+            </section>
+            <section>
+              <input type="email" name="email" v-model="email" placeholder="E-Mail" required>
+            </section>
+            <section>
+              <input type="password" name="password" v-model="password" placeholder="Password" required>
+            </section>
+            <section>
+              <input type="password" name="cpassword" v-model="repassword" placeholder="Confirm Password" required>
+            </section>
+            <section>
+              <input type="number" name="phno" v-model="pno" placeholder="Phone Number" required>
+            </section>
+            <section>
+              <input id="muj-last" type="number" name="whatsapp" v-model="wpno" placeholder="WhatsApp Number" required>
+            </section>
+            <input :style="disabled ? {pointerEvents: 'none', opacity: .5} : {pointerEvents: 'all', opacity: 1}" type="submit"
+              id="muj-submit" value="Submit" :disabled="disabled">
+          </form>
+          <transition name='fade'>
+            <p v-if="mujerror !== ''" id="mujregister-error" class="register-error">{{mujerror}}</p>
+          </transition>
+        </div>
+      </div>
+      <div class="register-container__black-section">
+        <div class="register-container__overlay register-container__black-section--overlay">
+          <h1>Other Students</h1>
+        </div>
+        <div class="register-container__underlay register-container__black-section--underlay">
+          <h1>Registration for Other Students</h1>
+          <form id="otherform" @submit.prevent="registerOther">
+            <section>
+              <input autocomplete="off" v-model="name" type="text" name="name" placeholder="Your Name">
+            </section>
+            <section>
+              <input autocomplete="off" v-model="username" type="text" name="username" placeholder="Username">
+            </section>
+            <section>
+              <input autocomplete="off" v-model="college" type="text" name="college" placeholder="College">
+            </section>
+            <section>
+              <input autocomplete="off" v-model="email" type="email" name="email" placeholder="E-Mail">
+            </section>
+            <section>
+              <input autocomplete="off" v-model="password" type="password" name="password" placeholder="Password">
+            </section>
+            <section>
+              <input autocomplete="off" v-model="repassword" type="password" name="cpassword" placeholder="Confirm Password">
+            </section>
+            <section>
+              <input autocomplete="off" v-model="pno" type="number" name="phno" placeholder="Phone Number">
+            </section>
+            <section>
+              <input id="other-last" autocomplete="off" v-model="wpno" type="number" name="whatsapp" placeholder="WhatsApp Number">
+            </section>
+            <section id="refcode">
+              <input autocomplete="off" v-model="code" type="text" name="refcode" placeholder="Referral Code (Optional)">
+            </section>
+            <section id="campusambassador">
+              <input id="default-radio" type="checkbox" v-model="campamb">
+              <label for="default-radio">Do you wish to be a Campus Ambassador?<span id="custom-radio"></span></label>
+            </section>
+            <input :style="disabled ? {pointerEvents: 'none', opacity: .5} : {pointerEvents: 'all', opacity: 1}" type="submit"
+              id="other-submit" value="Submit" :disabled="disabled">
+          </form>
+          <transition name='fade'>
+            <p v-if="othererror !== ''" id="otherregister-error" class="register-error">{{othererror}}</p>
+          </transition>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
+  <script src="/js/config/db.js?version=v1"></script>
+  <script src="/js/config/register/register.js?version=v1"></script>
+  <script src="/js/common/global.js"></script>
+  <script src="/js/register/index.js"></script>
+  <script src="/js/register/form.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+#sponsors-page {
+  .title {
+    font-size: 4rem;
+    text-align: center;
+    padding: 7rem 0;
+  }
+  .landing {
+    background: black;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Gotham";
+    button {
+      background-color: white;
+      color: black;
+      border-radius: 0;
+      border: none;
+      font-family: "Gotham";
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      outline: none;
+      margin: 0 auto;
+      margin-top: 3rem;
+      display: block;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      font-size: 2.5rem;
+      padding: 1.2rem 1.5rem;
+      transition: box-shadow 0.2s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22);
+      }
+      @media screen and (max-width: 768px) {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  .main {
+    color: white;
+    margin: 0;
+    font-size: 7rem;
+    word-wrap: break-word;
+  }
+
+  @media screen and (max-width: 768px) {
+    .main {
+      font-size: 5rem;
+    }
+  }
+  .container {
+    width: 100%;
+    background-color: white;
+    position: relative;
+    height: 100%;
+  }
+
+  .one {
+    padding: 1.5rem 0;
+  }
+
+  .Head {
+    font-size: 3rem;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    color: #f52323;
+    padding: 7rem 0;
+  }
+  .IMG {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 19rem;
+  }
+
+  .image-2,
+  .image-3,
+  .image-1,
+  .image-4,
+  .image-5,
+  .image-6 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo {
+    width: 300px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .logo {
+      width: 200px;
+    }
+  }
+  // .logo {
+  //   display: grid;
+  //   position: relative;
+  //   grid-template-columns: repeat(1, 1fr);
+  //   grid-gap: 0.5em;
+  //   grid-auto-rows: minmax(400px, auto);
+  // }
+
+  .image {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+    grid-auto-rows: minmax(200px, auto);
+  }
+
+  .desc {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 3rem;
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    margin: 0;
+  }
+
+  .image-sponsor {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 70%;
+    display: block;
+    // cursor: pointer;
+    margin: 0 auto;
+  }
+
+  .imgtxt {
+    text-align: center;
+    font-size: 4 rem;
+  }
+
+  /* .container section:nth-child(odd) {
+    background-color: #fff;
+} */
+  // .ono {
+  //   background: url("/img/logos/logo.png") no-repeat;
+  //   background-position: center;
+  //   background-size: contain;
+  // }
+
+  .Image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3em;
+    grid-auto-rows: minmax(250px, auto);
+  }
+
+  @media (max-width: 760px) {
+    /* .image-sponsor {
+        width: 70%;
+    } */
+
+    .ono {
+      width: 70%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .Image {
+      grid-template-columns: 1fr;
+      grid-gap: 3rem;
+    }
+  }
+}

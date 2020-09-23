@@ -1,0 +1,69 @@
+.me {
+  &__nav {
+    transition: .5s all cubic-bezier(0.7, 0.03, 0.44, 1);
+    position: absolute;
+    height: 10rem;
+    width: 100%;
+    bottom: 50%;
+    transform: translateY(50%);
+    background: #fff;
+    z-index: 20;
+    display: none;
+
+    &>div {
+      display: none;
+      height: 100%;
+    }
+
+    &--header {
+      font-size: 5rem;
+      font-family: 'Gotham-Black';
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .3s all;
+      opacity: 0;
+      transform: translateY(10px);
+
+      @media screen and (max-width: 800px) {
+        font-size: 3rem;
+      }
+
+      &:hover {
+        transform: scale(1.1) translateY(-10px);
+        text-shadow: 0 0 2rem rgba(#222, .2);
+        color: $color-primary;
+      }
+
+      &-active {
+        color: $color-secondary;
+      }
+
+      span {
+        font-size: 1rem;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &--show {
+      display: inherit;
+    }
+  }
+}
+
+.option--show {
+  display: flex !important;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__header {
+    opacity: 1;
+    transform: translateY(-0px);
+  }
+}
+
+.nav--bottomfix {
+  bottom: 0 !important;
+  transform: translateY(0);
+}

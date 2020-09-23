@@ -1,0 +1,83 @@
+@import "./payments";
+@import "./byEvent";
+
+#admin-index {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+  }
+  a {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border: 1px solid black;
+    padding: 1rem;
+    font-size: 2rem;
+    display: block;
+    margin: 0 auto;
+    width: 40rem;
+    word-wrap: break-word;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 2rem;
+    color: black;
+    text-align: center;
+  }
+  a:hover {
+    background-color: black;
+    color: white;
+  }
+}
+.admin-loader {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
+  .box-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h2 {
+      padding-bottom: 3rem;
+      font-size: 3rem;
+    }
+    .box {
+      margin: 0 auto;
+      height: 20px;
+      width: 20px;
+      background-color: black;
+      animation: spin infinite 2s;
+    }
+  }
+  @-moz-keyframes spin {
+    from {
+      -moz-transform: rotate(0deg);
+    }
+    to {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

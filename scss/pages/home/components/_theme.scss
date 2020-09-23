@@ -1,0 +1,31 @@
+.home-theme {
+  &__content {
+    position: absolute;
+    bottom: 15rem;
+    left: 5rem;
+    width: 40%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 4rem 2rem;
+    box-shadow: 0 0 1rem #fff;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s all;
+  }
+
+  &__header {
+    font-size: 7rem;
+    font-family: "Gotham-Black";
+    color: $color-primary;
+    margin-bottom: 2rem;
+  }
+
+  &__para {
+    font-size: 2rem;
+    // line-height: 1.5;
+  }
+}
+
+.home-theme-showcontent {
+  opacity: 1;
+}

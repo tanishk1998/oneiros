@@ -1,0 +1,138 @@
+.home-contact {
+  display: flex;
+  flex-direction: column;
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(#222, 0.5), transparent);
+    z-index: 1;
+  }
+
+  input,
+  textarea {
+    width: 75%;
+    color: #fff;
+    position: relative;
+    z-index: 5;
+
+    &:focus+.home-contact__underline {
+      width: 80%;
+    }
+
+    &::placeholder {
+      color: #fff;
+      font-family: "Gotham-Thin";
+      transition: 0.2s all;
+    }
+
+    &:focus::placeholder {
+      opacity: 0.5;
+    }
+  }
+
+  &__splash,
+  &__details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__splash {
+    height: 40%;
+    background: url("/img/home/contact.jpg");
+    background-size: cover;
+    background-position: top;
+
+    input {
+      border: none;
+      font-size: 7rem;
+      font-family: "Gotham";
+      background: transparent;
+
+      &:focus+span {
+        background: $color-secondary;
+      }
+
+      @media (max-width: 800px) {
+        font-size: 5rem;
+        margin-top: 12rem;
+      }
+    }
+
+    input+span {
+      width: 80% !important;
+    }
+
+    #contact-email {
+      width: 80%;
+
+      // border-top: none;
+      // border-left: none;
+      // border-right: none;
+      .home-contact__underline {
+        width: 80%;
+      }
+    }
+  }
+
+  &__details {
+    height: 60%;
+    justify-content: flex-start;
+
+    input {
+      margin-top: 5rem;
+    }
+
+    textarea {
+      margin-top: 3rem;
+    }
+
+    input,
+    textarea {
+      border: none;
+      font-size: 2.5rem;
+      background: transparent;
+      color: #fff;
+      font-family: "Gotham";
+      z-index: 5;
+      position: relative;
+    }
+
+    h1 {
+      pointer-events: none;
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      color: #111;
+      font-size: 20rem;
+      font-family: "Gotham-Black";
+      z-index: 0;
+    }
+
+    input+span {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__underline {
+    transition: 0.2s all;
+    height: 3px;
+    transform: translateY(2.5rem);
+    width: 0%;
+    border-radius: 10px;
+    z-index: 5;
+    position: relative;
+
+    &--white {
+      background: #fff;
+    }
+
+    &--blue {
+      background: #303f9f;
+    }
+  }
+}

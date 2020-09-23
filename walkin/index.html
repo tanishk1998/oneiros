@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <title>Walk-In Registrations - Oneiros</title>
+</head>
+
+<body>
+  <div id="walkin">
+    <div class="user-info">
+      <div>
+        Hello, {{user.displayName}}
+      </div>
+      <a class="waves-effect btn-small grey-text text-lighten-4" @click="logout">logout</a>
+    </div>
+    <div id="walkin-info">
+
+      <div class="row">
+        <div class="col s12">
+          <h2>Walk-In Registrations</h2>
+        </div>
+      </div>
+      <div class="row">
+        <form action="" class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input autocomplete="off" id="name" :disabled="registered" type="text" class="input-text" @keyup.enter="walkIn"
+                v-model="name">
+              <label for="name">Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input autocomplete="off" id="email" :disabled="registered" type="email" class="input-text" @keyup.enter="walkIn"
+                v-model="email">
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s6">
+              <label class="radio-labels right-label">
+                <input autocomplete="off" name="group1" :disabled="registered" type="radio" value="manipal" @change="changeType"
+                  v-model="type" />
+                <span>Manipal</span>
+              </label>
+            </div>
+            <div class="col s6">
+              <label class="radio-labels">
+                <input autocomplete="off" :disabled="registered" name="group1" type="radio" value="outhouse" @change="changeType"
+                  v-model="type" />
+                <span>Outhouse</span>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input autocomplete="off" id="pno" :disabled="registered" type="number" class="input-text" @keyup.enter="walkIn"
+                v-model="pno">
+              <label for="pno">Phone Number</label>
+            </div>
+            <div class="input-field col s6" v-if="type == 'outhouse'">
+              <input autocomplete="off" id="college" :disabled="registered" type="text" class="input-text" @keyup.enter="walkIn"
+                v-model="college" :disabled="disabled">
+              <label for="college" v-if="type != 'manipal' && type != ''">College Name</label>
+            </div>
+            <div class="input-field col s6" v-if="type == 'manipal'">
+              <input autocomplete="off" id="regno" :disabled="registered" type="text" class="input-text" @keyup.enter="walkIn"
+                v-model="regno">
+              <label for="regno">Registration Number</label>
+            </div>
+          </div>
+          <div class="row" style="text-align: center;" v-if="!registered">
+            <a class="waves-effect waves-purple btn red lighten-1" v-if="!loading" @click="walkIn">submit</a>
+            <div v-else class="preloader-wrapper small active">
+              <div class="spinner-layer spinner-red-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                  <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="text-align: center;" v-else>
+            <div class="col s6">
+              The Walk-In ID for {{name}} is: {{uniqueID}}
+            </div>
+            <div class="col s6">
+              <a class="waves-effect waves-purple btn red lighten-1" @click="clear">Done</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>
+  <script src="/js/config/db.js"></script>
+  <script src="/js/libs/jquery.js"></script>
+  <script src="/js/config/walkin/walkin.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('select').formSelect();
+    });
+  </script>
+</body>
+
+</html>

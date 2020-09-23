@@ -1,0 +1,47 @@
+.me {
+  &__details {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(-50px);
+    background: #fff;
+    z-index: 60;
+    transition: .2s all;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 3rem rgba(#222, .5);
+    pointer-events: none;
+    opacity: 0;
+
+    &--close {
+      content: '';
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      width: 5rem;
+      height: 5rem;
+      background: url('https://www.materialui.co/materialIcons/navigation/close_black_2048x2048.png');
+      background-size: cover;
+      cursor: pointer;
+      z-index: 20;
+      transition: .2s all;
+
+      &:hover {
+        transform: scale(1.2) rotate(45deg);
+      }
+    }
+  }
+}
+
+.dialog--active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%) translateY(0);
+}
+
+.bg--fade {
+  filter: brightness(.2);
+}

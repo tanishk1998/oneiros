@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Admin Payments - Oneiros</title>
+</head>
+
+<body>
+  <div class="admin-loader">
+    <div class="box-wrapper">
+      <h2>Loading</h2>
+      <div class="box">
+      </div>
+    </div>
+  </div>
+  <div id="payments-admin">
+    <h3>Admin Payment</h3>
+    <input type="text" id="uid" @keyup.enter="addPayment" v-model="uid" placeholder="Enter UID">
+    <button @click="addPayment" :style="disabled ? {pointerEvents: 'none', opacity: .5} : {pointerEvents: 'all', opacity: 1}"
+      :disabled="disabled">Submit</button>
+    <br><br>
+    <div class="details" v-if="show">
+      <p>
+        Name: {{name}} <br> <br>
+        Username: {{username}} <br> <br>
+        Phone Numer: {{pno}} <br> <br>
+        Whatsapp Number: {{wpno}} <br> <br>
+        Email: {{email}} <br> <br>
+      </p>
+      <br>
+      <hr>
+      <br>
+      <div class="event-det" v-for="(event,index) in events">
+        Event Index: {{index + 1}} <br> <br>
+        Event Name: {{event.event}} <br> <br>
+        Paid: {{event.paid}} <br> <br>
+        Amount: {{event.amount}} <br> <br>
+        Number of Participants: {{event.value}}
+        <button @click="addPaid(index)" v-if="!event.paid">Paid</button>
+        <button v-if="event.paid">Not Paid</button>
+        <br>
+        <br>
+        <hr>
+        <br>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/js/config/db.js"></script>
+  <script src="/js/config/admin/payments/index.js"></script>
+  <script src="../checkPerson.js"></script>
+  <script src="/js/common/global.js"></script>
+</body>
+
+</html>

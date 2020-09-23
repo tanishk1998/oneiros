@@ -1,0 +1,73 @@
+.me {
+  &__controls {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    &--control {
+      z-index: 22;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5rem;
+      height: 20rem;
+      background: $color-secondary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .5s all;
+      cursor: pointer;
+      pointer-events: none;
+      opacity: 0;
+      box-shadow: 0 0 2rem rgba(#222, .2);
+      border-radius: 5px;
+
+      &:hover {
+        background: #fff;
+        width: 20rem;
+
+        h1 {
+          color: $color-primary;
+          font-family: 'Gotham-Black';
+          transform: rotate(0deg);
+          font-size: 3rem;
+        }
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: #fff;
+        font-family: 'Gotham-Bold';
+        text-transform: uppercase;
+        transition: .2s all;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.show--controls {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.controls--expand {
+  width: 100% !important;
+
+  &-right,
+  &-left {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &-right {
+    right: 0;
+    left: auto;
+  }
+
+  &-left {
+    left: 0;
+    right: auto;
+  }
+}

@@ -1,0 +1,54 @@
+.color-primary {
+  color: $color-primary;
+}
+
+.color-secondary {
+  color: $color-secondary;
+}
+
+.color-black {
+  color: $color-black;
+}
+
+.bg-grey-light {
+  background: #f5f5f5;
+}
+
+.ono-btn {
+  padding: 2rem 5rem;
+  font-size: 3rem;
+  font-family: "Gotham-Bold";
+  color: $color-primary;
+  border: 3px solid $color-primary;
+  transition: 0.2s all;
+  border-radius: 50px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background: $color-primary;
+    color: #fff;
+  }
+
+  &--small {
+    transform: scale(0.8);
+  }
+
+  &--light {
+    color: white;
+    border-color: white;
+
+    &:hover {
+      background: $color-secondary;
+    }
+  }
+}
+
+.wordmark-dark {
+  filter: invert(1);
+}
+
+.mt-0 {
+  margin-top: 0;
+}

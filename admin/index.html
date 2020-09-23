@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Admin</title>
+</head>
+
+<body>
+  <div class="admin-loader">
+    <div class="box-wrapper">
+      <h2>Loading</h2>
+      <div class="box">
+      </div>
+    </div>
+  </div>
+  <div id="admin-index">
+    <h2>Admin - Index</h2>
+    <a href="./byEvent">Event Wise Registration</a>
+    <a href="./byUnique">Unique Code Checker</a>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/js/config/db.js"></script>
+  <script src="./checkPerson.js"></script>
+  <script src="/js/common/global.js"></script>
+</body>
+
+</html>

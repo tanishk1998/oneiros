@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.landing {
+  background: #222;
+  height: 100vh;
+  text-align: center;
+}
+
+.main {
+  color: white;
+  margin: 0;
+  font-family: "Lato";
+  font-size: 4rem;
+  word-wrap: break-word;
+}
+
+.container {
+  width: 100%;
+  background-color: white;
+  position: relative;
+  height: 100%;
+}
+
+.one {
+  padding: 1.5rem 0;
+}
+
+.Head {
+  font-size: 3rem;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+  font-family: "nikoleta";
+  color: #f52323;
+  margin-top: 2rem;
+}
+
+.IMG {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 19rem;
+}
+
+.image-2,
+.image-3,
+.image-1,
+.image-4,
+.image-5,
+.image-6 {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0.5em;
+  grid-auto-rows: minmax(400px, auto);
+}
+
+.image {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 3rem;
+  grid-auto-rows: minmax(200px, auto);
+}
+
+.desc {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.image-sponsor {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+.imgtxt {
+  font-family: "Roboto" thin;
+  text-align: center;
+  font-size: 4 rem;
+}
+
+/* .container section:nth-child(odd) {
+    background-color: #fff;
+} */
+.ono {
+  background: url(/static/ono.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.Image {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3em;
+  grid-auto-rows: minmax(250px, auto);
+}
+
+@media (max-width: 760px) {
+  /* .image-sponsor {
+        width: 70%;
+    } */
+
+  .ono {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .Image {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+  }
+}
